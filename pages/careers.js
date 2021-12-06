@@ -1,5 +1,9 @@
-function Careers() {
-  return <h1 className="font-bold">Careers (Next.js)</h1>;
+export default function Careers() {
+  return (
+    <div className="flex justify-center m-8">
+      <h1>
+        Careers <span className="italic font-medium">rendered by Next.js</span>
+      </h1>
+    </div>
+  );
 }
-
-export default Careers;

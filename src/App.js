@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
+import { ReactNavbar } from "./components/ReactNavbar";
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered)
 //
@@ -12,7 +12,15 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 export default function App() {
   return (
-    <Router>
+    <>
+      <Router>
+        <ReactNavbar />
+        <Routes>
+          <Route path="faq" element={<Faq />} />
+          <Route path="about" element={<About />} />
+          <Route path="dashboard" element={<Dashboard />} />
+        </Routes>
+      </Router>
       {/*
           A <Routes> looks through all its children <Route>
           elements and renders the first one whose path
@@ -20,12 +28,7 @@ export default function App() {
           you have multiple routes, but you want only one
           of them to render at a time
         */}
-      <Routes>
-        <Route path="faq" element={<Faq />} />
-        <Route path="about" element={<About />} />
-        <Route path="dashboard" element={<Dashboard />} />
-      </Routes>
-    </Router>
+    </>
   );
 }
 
@@ -35,7 +38,11 @@ export default function App() {
 function Faq() {
   return (
     <div>
-      <h2>FAQ (React SPA)</h2>
+      <div className="flex justify-center m-8">
+        <h1>
+          FAQ <span className="italic font-medium">rendered by React SPA</span>
+        </h1>
+      </div>
     </div>
   );
 }
@@ -43,7 +50,12 @@ function Faq() {
 function About() {
   return (
     <div>
-      <h2>About (React SPA)</h2>
+      <div className="flex justify-center m-8">
+        <h1>
+          About{" "}
+          <span className="italic font-medium">rendered by React SPA</span>
+        </h1>
+      </div>
     </div>
   );
 }
@@ -51,7 +63,12 @@ function About() {
 function Dashboard() {
   return (
     <div>
-      <h2>Dashboard (React SPA)</h2>
+      <div className="flex justify-center m-8">
+        <h1>
+          Dashboard{" "}
+          <span className="italic font-medium">rendered by React SPA</span>
+        </h1>
+      </div>{" "}
     </div>
   );
 }

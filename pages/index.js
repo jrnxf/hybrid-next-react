@@ -1,3 +1,9 @@
 export default function Home() {
-  return <h1>Home (Next.js)</h1>;
+  return (
+    <div className="flex justify-center m-8">
+      <h1>
+        Home <span className="italic font-medium">rendered by Next.js</span>
+      </h1>
+    </div>
+  );
 }
