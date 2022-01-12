@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 export const NextNavbar = () => {
   const router = useRouter();
   return (
-    <>
+    <nav>
       {!router.pathname.includes("[...app]") && (
         <ul className="flex p-4">
           <li className="mr-3">
@@ -45,6 +45,6 @@ export const NextNavbar = () => {
           </li>
         </ul>
       )}
-    </>
+    </nav>
   );
 };
