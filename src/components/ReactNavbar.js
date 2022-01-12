@@ -1,6 +1,5 @@
 import React from "react";
-import Link from "next/link";
-import { Link as RRLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const ReactNavbar = () => (
   <ul className="flex p-4">
@@ -19,23 +18,23 @@ export const ReactNavbar = () => (
       </a>
     </li>
     <li className="mr-3">
-      <RRLink to="/faq">
+      <Link to="/faq">
         <div className="inline-block px-4 py-2 rounded cursor-pointer">FAQ</div>
-      </RRLink>
+      </Link>
     </li>
     <li className="mr-3">
-      <RRLink to="/about">
+      <Link to="/about">
         <div className="inline-block px-4 py-2 rounded cursor-pointer">
           About
         </div>
-      </RRLink>
+      </Link>
     </li>
     <li className="mr-3">
-      <RRLink to="/dashboard">
+      <Link to="/dashboard">
         <div className="inline-block px-4 py-2 rounded cursor-pointer">
           Dashboard
         </div>
-      </RRLink>
+      </Link>
     </li>
   </ul>
 );
